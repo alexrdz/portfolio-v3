@@ -97,6 +97,8 @@
     &__role
       filter: hue-rotate(250deg) saturate(65%)
     &__UX
-      background-image: url('/img/panda-bg.jpg')
-      .Grid
-        background-color: rgba($light, 0.85)
+      background-image: url('/img/panda-bg-m.jpg')
+      +above($medium)
+        background-image: url('/img/panda-bg.jpg')
+        .Grid
+          background-color: rgba($light, 0.85)
