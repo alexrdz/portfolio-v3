@@ -1,61 +1,74 @@
-.Navigation
-  background-color: $lightest
-  +above($medium)
-      background-color: transparent
-  flex-direction: row
-  position: fixed
-  top: 0
-  right: 0
+.Navigation-trigger
   left: 0
-  z-index: 100
-  a
-    &:after
-      background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%)
+  padding: 0 2em
+  position: fixed
+  right: 0
+  top: 0
+  z-index: 10
+
+  .Cell
+    text-align: right
+    +above($medium)
+      text-align: center
+
+  &__button
+    background: transparent
+    border: none
+    cursor: pointer
+    font-size: responsive 12px 12px
+    padding: 0 0 2em 0
+    position: relative
+    
+    &:before, &:after
+      background-color: $brown
       content: ''
       display: block
-      height: 2px
-      margin: 0 auto
-      transition: all .3s ease-in-out
-      width: 0
-    &:hover
-      color: $link-hover
-      &:after
-        width: 30px
-
-  &.is-home
-    background-color: transparent
-    a
-      color: #fff
-
-  .Grid
-    flex-direction: row
-    +below($medium)
-      .Cell
-        padding: .5em
-  
-  .six
-    +below($medium)
+      height: 5px
+      left: 0
+      position: absolute
+      transition: all .5s
+      top: 25px
       width: 100%
+    &:after
+      top: 35px
+    
+    &.is-visible
+      color: $orange
+      &:before, &:after
+        background-color: $orange
+        height: 2px
+      &:before
+        top: 35px
+        transform: rotate(45deg)
+      &:after
+        transform: rotate(-45deg)
 
 
 
-.Navigation__secondary
+
+.Navigation
+  background-color: rgba($dark, .95)
+  height: 100vh
+  padding-top: 25vh
+  position: fixed
+  right: -100%
+  transition: right .6s ease-in-out
+  width: 100%
+  z-index: 5
   +above($medium)
-    background-color: transparent
-    bottom: -20%
-    margin-top: 0
-    position: fixed
-  background-color: $light
-  left: 0
+    right: -35%
+    width: 35%
+  &.is-visible
+    right: 0
   
-  right: 0
-  transition: all .6s ease-in-out
-  z-index: 100
-  &.moveInUp
-    bottom: 0%
   a
-    font-size: .8em
-    margin: 0 15px
+    display: block
 
-  &.Grid
-    position: fixed
+
+.Header__logo
+  width: 50px
+  span
+    color: $brown
+    display: inline-block
+    float: right
+    margin: 10% 0 0 2em

@@ -1,63 +1,26 @@
 .Home
-  +above($medium)
-    overflow: hidden
-  &.moveToLeft
-    height: 0%
-
-.Home 
-  &> .Cell
-    +above($medium)
-      height: 100vh
-
-  .Left-pane
-    background-image: url('../img/alexrdz.jpg')
-    background-attachment: fixed
-    background-position: left center
-    background-repeat: no-repeat
-    padding-top: 35vh
-    +below($medium)
-      background-size: cover
-    
-    &__image
-      background-image: linear-gradient(180deg, #2af598 0%, #009efd 100%)
-      position: fixed
-      left: 0
-      right: 0
-      top: 0
-      bottom: 0
-      opacity: .6
-      +above($medium)
-        width: 50%
-
-    &__content
-      color: #fff
-      position: relative
-      z-index: 5
-      +above($medium)
-        padding: 6em
-        top: 75%
-        transform: translateY(-55%)
-      
-
-.Right-pane
-  background-color: $lightest
-  padding-bottom: 15vh
-  position: relative
-  z-index: 6
-  +above($medium)
-    padding: 2em 6em
+  background-image: url('/img/home-bg.jpg')
+  background-position: 0 0
+  background-repeat: no-repeat
+  background-size: cover
   &__content
-    position: relative
-
+    background-color: rgba($lightest, .75)
+    +above($medium)
+      background-color: rgba($lightest, .65)
+    height: 100%
+    padding: 0 0 4em 0
+  h1
+    font-family: $serif
 .Brand
   display: block
-  height: auto
-  margin: 0 auto 10vh
-  position: relative
-  width: 65px
+  margin: 0 auto
+  width: 100px
 .underscore
   background-color: rgba($brown, .3)
   height: 1px
-  margin: 10px auto 30px
+  margin: 0 auto 30px
   width: 5%
-    
+
+.Contact
+  background-color: $light
+  height: 18em

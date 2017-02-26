@@ -1,8 +1,23 @@
-.Grid.Work-item.animate.slideUp
-  .Cell.six.Left-pane.second.animate
-    .Left-pane__content
-      .animate.fadeInUp.delay-3
-        img(src="/img/portfolio/panda.png", alt="panda app").Portfolio__image
+extends _layout
+
+block vars
+  - var bodyClass = 'Home'
+
+block content
+  .Work__content.Grid.center
+    .Cell.six
+      h1.text-center.uppercase Panda App
+      .underscore.animate.growWidth.delay-4 &nbsp;
+      h2.text-center.animate.fadeInUp UI Designer &amp; Javascript Developer
+      p I am a dedicated UI designer and JavaScript developer with a passion for smart design and beautiful code. 
+      p My enterprise experience includes user-centric design and development. Personal work and passion projects include sites and applications for small businesses and niche audiences.
+
+
+//- .Grid.Work-item.animate.slideUp
+//-   .Cell.six.Left-pane.second.animate
+//-     .Left-pane__content
+//-       .animate.fadeInUp.delay-3
+//-         img(src="/img/portfolio/panda.png", alt="panda app").Portfolio__image
       
   .Cell.fill.Right-pane.first
     .Right-pane__content

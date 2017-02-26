@@ -1,17 +1,23 @@
-.Grid.Work-item.animate.slideUp
-  .Cell.six.Left-pane.second.animate
-    .Left-pane__content
-      .animate.fadeInUp.delay-3
-        img(src="/img/portfolio/le-pages.png", alt="laredo examiners").Portfolio__image
-      
-  .Cell.fill.Right-pane.first
-    .Right-pane__content
-      .animate.fadeInDown.delay-2
-        h2.Project__title.uppercase Laredo Examiners
-        p.Project__role Design
-        p.Project__description Responsive design for small business based in Laredo, TX.
-        ul
-          li HTML &amp; CSS
-          li jQuery
-        p.Project__link
-          a(href="http://laredoexaminers.com/") Laredo Examiners
+extends ../_layout
+
+block vars
+  - var bodyClass = 'Laredo-examiners'
+
+block content
+  .Grid.Work-item.animate.slideUp
+    .Cell.six.Left-pane.second.animate
+      .Left-pane__content
+        .animate.fadeInUp.delay-3
+          img(src="/img/portfolio/le-pages.png", alt="laredo examiners").Portfolio__image
+        
+    .Cell.fill.Right-pane.first
+      .Right-pane__content
+        .animate.fadeInDown.delay-2
+          h2.Project__title.uppercase Laredo Examiners
+          p.Project__role Design
+          p.Project__description Responsive design for small business based in Laredo, TX.
+          ul
+            li HTML &amp; CSS
+            li jQuery
+          p.Project__link
+            a(href="http://laredoexaminers.com/") Laredo Examiners

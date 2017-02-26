@@ -24,6 +24,12 @@ cell()
   grid()
   +below($medium)
     flex-direction: column
+&.Grid__column
+  flex-direction: column
+&.Grid__row
+  +below($medium)
+    flex-direction: row
+  
 
 .Grid
   &.top

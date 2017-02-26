@@ -1,23 +1,14 @@
 extends _layout
 
-block home
-  .Grid.Home
-    .Cell.six.Left-pane
-      .Left-pane__image
-      .Left-pane__content.text-center        
-        h1.animate.fadeInDown hi, i'm alex
-        p.animate.fadeInUp i design + develop websites for small businesses, artists, nonprofits and other nice people. 
-        
-    .Cell.six.Right-pane
-      .Right-pane__content
-        img(src="./img/alexrdz-skull.svg", alt="alexrdz skull logo").Brand
-        h1.text-center.Main-title Alex Rodriguez
-        .underscore.animate.growWidth.delay-2 &nbsp;
-        h4.text-center.italics UI Designer &amp; Javascript Developer
-        p I am a dedicated UI designer and JavaScript developer with a passion for smart design and beautiful code. 
-        p My enterprise experience includes user-centric design and development. Personal work and passion projects include sites and applications for small businesses and niche audiences.
+block vars
+  - var bodyClass = 'Home'
 
-
-
-
-  .Work
+block content
+  .Home__content.Grid.center
+    .Cell.six
+      img(src="./img/alexrdz-skull.svg", alt="alexrdz skull logo").Brand
+      h1.text-center.Main-title.animate.fadeInDown Alex Rodriguez
+      .underscore.animate.growWidth.delay-4 &nbsp;
+      h2.h3.text-center.animate.fadeInUp UI Designer &amp; Javascript Developer
+      p I am a dedicated UI designer and JavaScript developer with a passion for smart design and beautiful code. 
+      p My enterprise experience includes user-centric design and development. Personal work and passion projects include sites and applications for small businesses and niche audiences.

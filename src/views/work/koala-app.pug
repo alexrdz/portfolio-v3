@@ -1,22 +1,35 @@
-.Grid.Work-item.animate.slideInLeft
-  .Cell.six.Left-pane.second.animate
-    .Left-pane__content
-      .animate.fadeInUp.delay-3
-        img(src="/img/portfolio/koala.png", alt="koala app").Portfolio__image
-      
-  .Cell.fill.Right-pane.first
-    .Right-pane__content
-      .animate.fadeInDown.delay-2
-        h2.Project__title.uppercase Koala App
-        p.Project__role Technical Lead &amp; UI Developer
-        p.Project__description Koala is a web app built to help web developers in their job-seeking process. I worked with a team of 3 talented individuals on this full-stack MERN application (MongoDB, ExpressJS, ReactJS, and NodeJS). My role included:
+extends ../_layout
+
+block vars
+  - var bodyClass = 'Koala-app'
+  - var header = true
+
+block content
+  .Work__content
+    section.Grid.center.Work__main
+      .Cell.five
+        h2.Work__title.h1.text-center.uppercase Koala App
+        p.Work__description Koala is a web app built to help web developers in their job-seeking process. I worked with a team of 3 talented individuals on this full-stack MERN application (MongoDB, ExpressJS, ReactJS, and NodeJS).
+    section.Grid.Work__role.center
+      .Cell.six.text-center
+        h2.h5 Role
+        h3.Work__role-title.h4 Technical Lead &amp; UI Developer
         ul
           li Initial set-up of Express Server and configuration
           li Webpack configuration
           li deployment to Heroku
           li Github repository manager
           li UI/UX design and development
-        p.Project__link
-          a(href="https://kv3.herokuapp.com/") Koala App
-        p.Project__link
-          a(href="https://github.com/josedigital/koala-v3") Koala App @ github
+    section.Grid.Work__UX.center.middle
+      img(src="/img/koala-bg.jpg", alt="").Work__UX-img
+      .Cell.six
+        .UX__content
+          h2.h3.text-center User Flows &amp; Wireframes
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur aut incidunt, dolorum repellat illum consequuntur et nemo maiores ex ullam expedita, libero porro quaerat doloribus adipisci harum recusandae quo laudantium.
+    section.Grid.Work__screens
+      .Cell.six
+        h3 Some Title
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat officia, alias dolore officiis voluptas incidunt saepe dolorum.
+      .Cell.six
+        h3 Some Title
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat officia, alias dolore officiis voluptas incidunt saepe dolorum.

@@ -1,0 +1,22 @@
+block vars
+
+if header 
+  .Grid.Grid__row.between.Navigation-trigger.center
+    .Cell 
+      a(href="/").Header__logo
+        img(src="/img/alexrdz-skull.svg", alt="alexrdz logo").Header__logo 
+        span.serif Alex Rodriguez
+    .Cell.one
+      button(aria-expanded="false").js-navTrigger.Navigation-trigger__button.uppercase Menu
+else
+  .Grid.Grid__row.right.Navigation-trigger.center
+    .Cell.one
+      button(aria-expanded="false").js-navTrigger.Navigation-trigger__button.uppercase Menu
+.Grid
+  .Cell.Navigation
+    nav.Grid.Grid__column.uppercase.text-center
+      a(href="/").Cell.animate home
+      
+      a(href="/work/koala-app.html").Cell.animate.delay-1 Koala App
+      
+      a(href="/work/laredo-examiners.html").Cell.animate.delay-2 laredo examiners

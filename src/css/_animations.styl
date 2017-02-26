@@ -2,19 +2,25 @@
   animation-duration: .8s
   animation-fill-mode: both
   
-.delay
-  animation-delay: .4s
+.delay-1
+  animation-delay: .3s
 .delay-2
-  animation-delay: .8s
+  animation-delay: .6s
 .delay-3
+  animation-delay: .9s
+.delay-4
   animation-delay: 1.2s
+.delay-5
+  animation-delay: 1.5s
+.delay-6
+  animation-delay: 1.8s
 .slow
   animation-duration: .6s
 
 @keyframes slideInLeft
   0%
     opacity: 0
-    transform: translate3d(100%, 0, 0)
+    transform: translate3d(30%, 0, 0)
   100%
     opacity: 1
     transform: none
@@ -22,13 +28,11 @@
 .slideInLeft
   animation-name: slideInLeft
   animation-timing-function: ease-in-out
-  // animation-timing-function: cubic-bezier(.25,.82,.06,1.1)
-  // animation-timing-function: cubic-bezier(.23,1,.01,2)
 
 @keyframes slideOutLeft
   0%
     opacity: 0
-    transform: translate3d(-100%, 0, 0)
+    transform: translate3d(-30%, 0, 0)
   100%
     opacity: 1
     transform: none
@@ -60,10 +64,20 @@
 .slideDown
   animation-name: slideDown
 
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+    transform: none
+.fadeIn
+  animation-name: fadeIn
+
+
 @keyframes fadeInUp
   0%
     opacity: 0
-    transform: translate3d(0, 30px, 0)
+    transform: translate3d(0, 10%, 0)
   100%
     opacity: 1
     transform: none
@@ -72,7 +86,6 @@
 .fadeInUpBouncy
   animation-duration: .66s
   animation-name: fadeInUp
-  // animation-timing-function: cubic-bezier(.23,1,.01,2)
 
 
 @keyframes fadeInDown
@@ -84,6 +97,17 @@
     transform: none
 .fadeInDown
   animation-name: fadeInDown
+
+
+@keyframes fadeOutUp
+  0%
+    opacity: 1
+    transform: none
+  100%
+    opacity: 0
+    transform: translateY(-10%)
+.fadeOutUp
+  animation-name: fadeOutUp
 
 
 
@@ -139,28 +163,3 @@
 
 .moveToTop
   animation: moveToTop .6s ease-in-out both
-
-
-// @keyframes scaleImage
-//   to
-//     transform: scale(2)
-// .scaleImage
-//   animation: scaleImage .6s ease-in-out both
-
-/*
-@keyframes moveToLeft {
-	from { }
-	to { transform: translateX(-100%); }
-}
-.moveToLeft {
-	animation: moveToLeft .7s ease-in-out both;
-}
-
-
-@keyframes moveFromRight {
-	from { transform: translateX(100%); }
-}
-.moveFromRight {
-	animation: moveFromRight .6s ease both;
-}
-*/

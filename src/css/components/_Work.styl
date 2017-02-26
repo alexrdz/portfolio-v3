@@ -1,62 +1,39 @@
 .Work
-  position: absolute
-  top: 0
-  
-  width: 100%
-  z-index: 10
-
-.Work-text
-  padding-top: 10vh
-.Work-item
-  background-color: $light
-  left: 100%
-  position: relative
-  .Cell
-    padding-bottom: 15vh
-    padding-top: 15vh
-    transition: .6s ease-in-out both
-    +above($medium)
-      height: 100vh
-      overflow-y: auto
-    -webkit-overflow-scrolling: touch
-    &::-webkit-scrollbar
-      display: none
-  
-  .Left-pane
-    background-color: $lightest
-    &__content
-      +above($medium)
-        padding: 3em 6em
-        top: 0
-        transform: none
-
-  .Right-pane
+  &__content
     background-color: $light
-    padding-top: 10vh
-    // box-shadow: 2px 0px 41px rgba(0,0,0,.2)
-    &__content
-      padding: 10vh 1em 3em
-      +above($medium)
-        padding: 1em 0 6em
+  
+  &__main
+    padding: 8em 0
+  
+  &__title
+    &:after
+      background-color: $brown
+      border-radius: 5px
+      content: ''
+      display: block
+      height: 5px
+      margin: .5em auto
+      width: 15%
+  
+  &__screens
+    background-color: $dark
 
+  &__role
+    background: url('/img/role-background.svg') center 0 no-repeat
+    background-size: cover
+    color: $light
+    height: 420px
+    padding: 3em 0
+    position: relative
+    z-index: 2
+    ul
+      list-style: none
 
-.Project__title
-  &:after
-    background-color: rgba($brown, .3)
-    content: ''
-    display: block
-    height: 1px
-    margin: 1em 0
-    width: 30%
-
-.Project__role
-  font-weight: bold
-  // font-family: 'Varela Round', sans-serif
-
-
-.Portfolio__image
-  transition: all .6s ease-in-out
-  &.scaleImage
-    transform: scale(2)
-  &:hover
-    cursor: zoom-in
+  &__UX
+    height: 600px
+    position: relative
+    &-img
+      opacity: .25
+      position: absolute
+      right: 0
+      top: -50px
