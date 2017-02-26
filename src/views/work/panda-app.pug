@@ -1,13 +1,52 @@
-extends _layout
+extends ../_layout
 
 block vars
-  - var bodyClass = 'Home'
+  - var bodyClass = 'Work Panda-app'
+  - var header = true
 
 block content
-  .Work__content.Grid.center
-    .Cell.six
-      h1.text-center.uppercase Panda App
-      .underscore.animate.growWidth.delay-4 &nbsp;
-      h2.text-center.animate.fadeInUp UI Designer &amp; Javascript Developer
-      p I am a dedicated UI designer and JavaScript developer with a passion for smart design and beautiful code. 
-      p My enterprise experience includes user-centric design and development. Personal work and passion projects include sites and applications for small businesses and niche audiences.
+  .Work__content
+    section.Grid.center.Work__main
+      .Cell.five
+        h2.Work__title.h1.text-center.uppercase Panda App
+        p.Work__description Panda App was created for budding developers, whether on a path of self-study or as part of a group or bootcamp. The app provides curated resources, job search and preparation guides, and a code portfolio page to use as a starting point.
+    section.Grid.Work__role.center
+      .Cell.eight.text-center
+        h2.h5 Role
+        h3.Work__role-title.h4 Technical Lead
+        ul
+          li Initial set-up of Express Server and configuration
+          li Working with external APIs (Meetup, Dice, The Muse, and Indeed) to provide content
+          li Github repository manager
+          li UI/UX and front-end development (SASS &amp; Handlebars)
+          li support MySQL database integration
+    section.Work__UX
+      .Grid.center.stretch
+        .Cell.six
+          .UX__content
+            h2.h3.text-center User Flows &amp; Wireframes
+            p Our team dedicated one fourth of our alloted 3-week time period to developing user flows and wireframing the application. After defining application features, I had each team member walk me through their thinking process in a hypothetical app. This helped establish an agreed-upon user flow. I drew up wireframes, whose iteration led to a tab-based interface. These wires helped keep us on track in both design and devlopment.
+    section.Work__screens
+      .Grid.center
+        .Cell.eight
+          h3.text-center Curated Content for Easier Learning
+          p Panda's main aim is to provide curated content in the form of videos, PDFs, free books and other online resources to developers. Whether our users are in the early stages of their learning process or embarking upon a career in application development, Pand helps make the process easier by eliminating the time spent searching and finding valuable resources and combining them in one place.
+      .Grid.middle
+        .Cell.six
+          h3 Social Login
+          p We decided to use Github Login for Panda. Our users are devlopers at any stage of their leraning process so it was a safe assumption that all had Github accounts. Aside from being a good and easy login/signup process, social login also gave our app the ability to access Github repos, essential for users to create a shareable profile.
+        .Cell.six
+          img(src="/img/work/panda-macbook-1.png", alt="Panda App on laptop")
+      .Grid.middle
+        .Cell.six
+          img(src="/img/work/panda-macbook-2.png", alt="Panda App on laptop")
+        .Cell.six
+          h3 Public APIs
+          p I accessed several job board APIs (Dice, The Muse, and Indeed) to let users search for available jobs directly through our app. I also included the Meetup API so users can just as easily search for relevant groups in the area. All are filtered by a curated technology list. Github's API was also put to use to display users' code repositories.
+      .Grid.center
+        .Cell.eight
+          h3.text-center A Professional Profile for Developers
+          p Panda users are encouraged to easily create a public user profile. By choosing up to 4 of their favorite code repos, users can display them in a simple user profile page. I used a simple edit-in-place Javascript library to allow users to add a blurb about themselves and each code repo they chose. Becasue Panda is using their Github profile, users can choose to have their Github profile settings take precedence over Panda's, eliminating the need to re-type or copy + paste their profile info. 
+      .Grid.center
+        .Cell.eight
+          img(src="/img/work/panda-imac.png", alt="Panda App on iMac")
