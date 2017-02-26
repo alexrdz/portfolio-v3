@@ -17,12 +17,22 @@
   
   &__screens
     background-color: $dark
+    background-image: url('/img/work-bg.svg')
+    background-position: center center
+    background-repeat: no-repeat
+    color: $light
+    .Grid > .Cell
+      padding: 2em
+      +above($medium)
+        padding: 5em
+        &:first-child
+          padding-bottom: 0
 
   &__role
     background: url('/img/role-background.svg') center 0 no-repeat
     background-size: cover
     color: $light
-    height: 420px
+    height: 450px
     padding: 3em 0
     position: relative
     z-index: 2
@@ -30,10 +40,13 @@
       list-style: none
 
   &__UX
-    height: 600px
+    background-image: url('/img/koala-bg.jpg')
+    background-position: center 0
+    background-size: cover
+    // height: 30em
+    margin-top: -4em
     position: relative
-    &-img
-      opacity: .25
-      position: absolute
-      right: 0
-      top: -50px
+    .Grid
+      background-color: rgba($light, 0.7)
+      height: 100%
+      padding: 15em 0
