@@ -43,6 +43,7 @@
   //- cache DOM
   var body = $('body')
   var wrapper = $('.page-wrapper')
+  var navbar = $('.Navigation-trigger')
   var navTrigger = $('.js-navTrigger')
   var menu = $('.Navigation')
   var navLinks = $$('.Navigation a')
@@ -52,7 +53,8 @@
   navTrigger.addEventListener('click', function () {
     this.classList.toggle('is-visible')
     menu.classList.toggle('is-visible')
-
+    if (hasClass(navbar, 'is-scrolling'))
+      navbar.classList.toggle('is-scrolling')
     navLinks.forEach(function (link) {
       link.classList.toggle('slideInLeft')
     })
@@ -64,6 +66,8 @@
     var page = link.getAttribute('href')
     link.addEventListener('click', function (e) {
       e.preventDefault()
+      var loc = location.pathname
+      if (page === loc) return
       // retract navigation
       removeClass(menu, 'is-visible')
       setTimeout(function () {
@@ -76,9 +80,28 @@
     })
   })
 
+  //- window scroll
+  window.onscroll = function() {navBar()};
+  function navBar () {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      addClass(navbar, 'is-scrolling')
+    } else {
+      removeClass(navbar, 'is-scrolling')
+    }
+  }
+  function myFunction() {
+      console.log('is scrolling...')
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+          body.className = "test";
+      } else {
+          body.className = "";
+      }
+  }
   
+  //- fadeInUp after page loads
   Pace.on('done', function () {
     addClass(wrapper, 'fadeInUp')
   })
 
+  
 })();
