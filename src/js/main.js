@@ -55,14 +55,9 @@
     menu.classList.toggle('is-visible')
     if (hasClass(navbar, 'is-scrolling'))
       navbar.classList.toggle('is-scrolling')
-    // forEach not working on older browsers
-    // navLinks.forEach(function (link) {
-    //   link.classList.toggle('slideInLeft')
-    // })
-    for ( var link in navLinks ) {
-      navLinks[link].classList.toggle('slideInLeft')
-    }
-
+    navLinks.forEach(function (link) {
+      link.classList.toggle('slideInLeft')
+    })
   })
 
   //- handle nav links
