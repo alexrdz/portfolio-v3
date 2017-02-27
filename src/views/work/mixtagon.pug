@@ -1,21 +1,52 @@
-.Grid.Work-item.animate.slideOutLeft
-  .Cell.six.Left-pane.second.animate
-    .Left-pane__content
-      .animate.fadeInUp.delay-3
-        img(src="/img/portfolio/mixtagon.png", alt="the mixtagon").Portfolio__image
-      
-  .Cell.fill.Right-pane.first
-    .Right-pane__content
-      .animate.fadeInDown.delay-2
-        h2.Project__title.uppercase The Mixtagon
-        p.Project__role Design &amp; Development
-        p.Project__description This is a personal project site created using 
-          a(href="https://processwire.com/") Processwire CMF
-          |, an open source PHP framework and Content Management System. The Mixtagon allows members to create playlists by uploading music files and a small narrative. The purpose is to create music playlists based on a theme. Members can challenge each other on a particular theme and compete with their playlists. Playlist audio players are created with
-          a(href="https://github.com/kolber/audiojs") audiojs
-            |. 
+extends ../_layout
+
+block vars
+  - var bodyClass = 'Work Mixtagon'
+  - var header = true
+
+block content
+  .Work__content
+    section.Grid.center.Work__main
+      .Cell.five
+        h2.Work__title.h1.text-center.uppercase The Mixtagon
+        p.Work__description Mixtagon is a personal project site created using <a href="https://processwire.com/">Processwire CMF</a>, an open source PHP framework and Content Management System. The Mixtagon allows members to create playlists by uploading music files and a small narrative. The purpose is to create music playlists based on a theme. Members can challenge each other on a particular theme and compete with their playlists. Playlist audio players are created with <a href="https://github.com/kolber/audiojs">audiojs</a>. 
+    section.Grid.Work__role.center
+      .Cell.eight.text-center
+        h2.h5 Role
+        h3.Work__role-title.h4 Developer
         ul
-          li PHP development
-          li Javascript development
-          li Responsive design
-          li Concept and execution
+          li PHP developer
+          li UI/UX and front-end development
+          li Javascript developer (audiojs configuration)
+    section.Work__UX
+      .Grid.center.stretch
+        .Cell.six
+          .UX__content
+            h2.h3.text-center Design &amp; Development
+            p I created a diagram of how I wanted the application to work, and how I saw the user flow best laid out. Because I didn't have many user roles or screens to design, I skipped wireframes and I designed the entire app in the browser as I created the application itself. I exposed Processwire's admin panel via ajax to authenticated users using custom PHP and Javasctipt scripts thereby saving myself the need to create and design admin pages.
+    section.Work__screens
+      .Grid.center
+        .Cell.eight
+          h3.text-center A Fun Project and a Great CMS
+          p I created Mixtagon 3 years ago and it was a really fun project. I learned quite a bit of PHP programming, Object Oriented programming in PHP, and Javascript/AJAX. Processwire makes learning and writing PHP a beautiful experieince. I can't praise it enough. The only drawback I had with Processwire and PHP is that authentication and security are baked-in, so i didn't learn much in that respect. 
+      .Grid.center
+        .Cell.eight
+          img(src="/img/work/mixtagon-imac.png", alt="The Mixtagon App on iMac")
+      .Grid.middle
+        .Cell.six
+          h3 Exposing Processwire's Admin
+          p Processwire's API is so well-written that I was able to easily expose its admin to authenticated users. This allowed me to contentrate on the business logic that powered the application.
+        .Cell.six
+          img(src="/img/work/mixtagon-edit.gif", alt="animated gif of edit mode in Mixtagon").animated-gif
+          img(src="/img/work/empty-macbook.png", alt="laptop")
+      .Grid.middle
+        .Cell.six
+          img(src="/img/work/mixtagon-macbook-1.png", alt="Mixtagon App on laptop")
+        .Cell.six
+          h3 Audio Player
+          p Mixtagon uses 
+            a(href="https://github.com/kolber/audiojs") audiojs 
+            | to create audio players for each playlist. It's a fantastic JS library. It also uses 
+            a(href="http://www.getid3.org/") GetID3
+            | , a PHP library "that extracts useful information from MP3s." Users can then upload a batch of MP3s and the Mixtagon displays each file's metada including the song title, artist name, and the album. I also included text field backups in case no meta data is available. Users can also upload a companion image and add optional overlays to create a monochromatic look with a custom background.
+
