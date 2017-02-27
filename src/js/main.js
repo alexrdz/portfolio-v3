@@ -89,14 +89,7 @@
       removeClass(navbar, 'is-scrolling')
     }
   }
-  function myFunction() {
-      console.log('is scrolling...')
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-          body.className = "test";
-      } else {
-          body.className = "";
-      }
-  }
+
   
   //- fadeInUp after page loads
   Pace.on('done', function () {
