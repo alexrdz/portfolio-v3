@@ -47,7 +47,7 @@
   var navTrigger = $('.js-navTrigger')
   var menu = $('.Navigation')
   var navLinks = $$('.Navigation a')
-
+  
 
   //- handle show/hide menu
   navTrigger.addEventListener('click', function () {
